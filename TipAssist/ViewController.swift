@@ -12,9 +12,22 @@ import UIKit
 class ViewController: UIViewController, UITextFieldDelegate {
 
 
+    @IBOutlet weak var tipPercentageSlider: UISlider!
+    
     @IBOutlet weak var billAmountTextField: UITextField!
 
     @IBOutlet weak var tipLabel: UILabel!
+
+    private var tipPercentage: Double = 15
+
+    private var billAmount: Double {
+        get {
+            if let billAmountText = billAmountTextField?.text {
+                return (billAmountText.isEmpty) ? 0: Double(billAmountText)!
+            }
+            return 0
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +41,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
         return false
     }
 
+    @IBAction func recomputeTip(_ sender: UISlider) {
+        // computed with step function on 1
+        tipPercentage = Double(tipPercentageSlider.value.rounded())
+        print("TipPercentage \(tipPercentage)")
+        refreshTip()
+    }
 
     @IBAction func calculateTip(_ sender: UITextField) {
-        if let textVal = sender.text {
-            let billVal = Double(textVal)
-            let tipVal = billVal != nil ? String(billVal! * 0.15) : nil
-            tipLabel.text =  tipVal ?? "Invalid"
-        }
+        refreshTip()
+    }
+
+    func refreshTip() {
+        tipLabel.text = String(billAmount * tipPercentage/100)
     }
 
 }
