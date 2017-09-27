@@ -44,7 +44,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBAction func recomputeTip(_ sender: UISlider) {
         // computed with step function on 1
         tipPercentage = Double(tipPercentageSlider.value.rounded())
-        print("TipPercentage \(tipPercentage)")
         refreshTip()
     }
 
