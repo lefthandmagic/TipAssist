@@ -18,7 +18,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.billAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.billAmountTextField.resignFirstResponder))
         self.billAmountTextField.delegate = self
+        self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -34,6 +36,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
             tipLabel.text =  tipVal ?? "Invalid"
         }
     }
-    
+
 }
 
