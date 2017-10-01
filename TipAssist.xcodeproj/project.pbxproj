@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC3190601F8060E8008B62B6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */; };
 		AC430F1B1F7B5E150055C96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F1A1F7B5E150055C96E /* AppDelegate.swift */; };
 		AC430F1D1F7B5E150055C96E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F1C1F7B5E150055C96E /* ViewController.swift */; };
 		AC430F201F7B5E150055C96E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC430F1E1F7B5E150055C96E /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		AC430F171F7B5E150055C96E /* TipAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC430F1A1F7B5E150055C96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC430F1C1F7B5E150055C96E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				AC430F231F7B5E150055C96E /* LaunchScreen.storyboard */,
 				AC430F261F7B5E150055C96E /* Info.plist */,
 				AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */,
+				AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */,
 			);
 			path = TipAssist;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC3190601F8060E8008B62B6 /* DoubleExtension.swift in Sources */,
 				AC430F1D1F7B5E150055C96E /* ViewController.swift in Sources */,
 				AC430F2D1F7B60DC0055C96E /* UITextFieldExtension.swift in Sources */,
 				AC430F1B1F7B5E150055C96E /* AppDelegate.swift in Sources */,
@@ -308,6 +312,7 @@
 				AC430F2B1F7B5E150055C96E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -14,11 +14,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var tipPercentageSlider: UISlider!
     
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+
     @IBOutlet weak var billAmountTextField: UITextField!
 
     @IBOutlet weak var tipLabel: UILabel!
 
-    private var tipPercentage: Double = 15
+    @IBOutlet weak var totalLabel: UILabel!
+
+    private var tipPercentage: Int = 15
 
     private var billAmount: Double {
         get {
@@ -43,7 +47,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func recomputeTip(_ sender: UISlider) {
         // computed with step function on 1
-        tipPercentage = Double(tipPercentageSlider.value.rounded())
+        tipPercentage = Int(tipPercentageSlider.value.rounded())
         refreshTip()
     }
 
@@ -52,7 +56,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     func refreshTip() {
-        tipLabel.text = String(billAmount * tipPercentage/100)
+        let tipPercentageDouble = Double(tipPercentage)
+        let tip: Double = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
+        tipLabel.text = tip.format(precision: ".2")
+        totalLabel.text = (billAmount + tip).format(precision: ".2")
+        tipPercentageLabel.text = String("\(tipPercentage)%")
     }
 
 }
