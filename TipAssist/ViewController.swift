@@ -68,6 +68,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         tipLabel.text = tip.format(precision: ".2")
         totalLabel.text = (billAmount + tip).format(precision: ".2")
         tipPercentageLabel.text = String("\(tipPercentage)%")
+        tipPercentageSlider.value = Float(tipPercentageDouble)
     }
 
 }
