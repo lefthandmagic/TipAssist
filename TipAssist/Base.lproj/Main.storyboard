@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="lqL-Go-GIz">
-                                <rect key="frame" x="16" y="28" width="295" height="251"/>
+                                <rect key="frame" x="16" y="28" width="295" height="311"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="joG-RT-pSx">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="30"/>
@@ -85,13 +85,13 @@
                                         <rect key="frame" x="0.0" y="120" width="295" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Custom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTP-tU-TEr">
-                                                <rect key="frame" x="0.0" y="0.0" width="27.5" height="30"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.86274509799999999" green="0.23921568630000001" blue="0.14117647059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="15" minValue="5" maxValue="35" translatesAutoresizingMaskIntoConstraints="NO" id="P69-nr-xgJ">
-                                                <rect key="frame" x="35.5" y="0.0" width="220.5" height="31"/>
+                                                <rect key="frame" x="8" y="0.0" width="279" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.8901960784313725" green="0.68235294117647061" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="thumbTintColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -100,7 +100,7 @@
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-ca-EPT">
-                                                <rect key="frame" x="264" y="0.0" width="31" height="30"/>
+                                                <rect key="frame" x="295" y="0.0" width="0.0" height="30"/>
                                                 <attributedString key="attributedText">
                                                     <fragment content="15%">
                                                         <attributes>
@@ -164,6 +164,31 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="G9v-bb-aMv">
+                                        <rect key="frame" x="0.0" y="281" width="295" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8s-zK-hGH">
+                                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="30"/>
+                                                <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Round Up">
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="roundUp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iD5-sU-Mwb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l2U-5W-Zss">
+                                                <rect key="frame" x="152.5" y="0.0" width="142.5" height="30"/>
+                                                <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" title="Round Down">
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="roundDown:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5sa-W5-Q7H"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -184,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="164" y="43.628185907046479"/>
+            <point key="canvasLocation" x="163.125" y="42.5"/>
         </scene>
     </scenes>
 </document>

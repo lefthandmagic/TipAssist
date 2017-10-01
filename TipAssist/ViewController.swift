@@ -24,6 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     private var tipPercentage: Int = 15
 
+    private var total: Double = 0.0
+
+    private var tip: Double = 0.0
+
     private var billAmount: Double {
         get {
             if let billAmountText = billAmountTextField?.text {
@@ -62,11 +66,33 @@ class ViewController: UIViewController, UITextFieldDelegate {
         refreshTip()
     }
 
+    @IBAction func roundUp(_ sender: UIButton) {
+        let roundUpTotal = total.rounded(FloatingPointRoundingRule.up)
+        let tipDiff = roundUpTotal - total
+        tip = tip + tipDiff
+        total = roundUpTotal
+        updateUI()
+    }
+
+    @IBAction func roundDown(_ sender: Any) {
+        let roundDownTotal = total.rounded(FloatingPointRoundingRule.down)
+        let tipDiff = total - roundDownTotal
+        tip = tip - tipDiff
+        total = roundDownTotal
+        updateUI()
+    }
+
     func refreshTip() {
         let tipPercentageDouble = Double(tipPercentage)
-        let tip: Double = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
+        tip = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
+        total = billAmount + tip
+        updateUI()
+    }
+
+    private func updateUI() {
+        let tipPercentageDouble = Double(tipPercentage)
         tipLabel.text = tip.format(precision: ".2")
-        totalLabel.text = (billAmount + tip).format(precision: ".2")
+        totalLabel.text = (total).format(precision: ".2")
         tipPercentageLabel.text = String("\(tipPercentage)%")
         tipPercentageSlider.value = Float(tipPercentageDouble)
     }
