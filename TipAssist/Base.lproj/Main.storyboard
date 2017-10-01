@@ -19,11 +19,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lqL-Go-GIz">
-                                <rect key="frame" x="16" y="72" width="288" height="211"/>
+                                <rect key="frame" x="16" y="8" width="288" height="211"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="joG-RT-pSx">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="30"/>
@@ -201,8 +201,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TipAssist" id="ILl-fQ-xDO">
-                        <barButtonItem key="rightBarButtonItem" image="icons8-Settings-50" width="1" id="34A-v1-dNK">
-                            <inset key="imageInsets" minX="15" minY="15" maxX="10" maxY="15"/>
+                        <barButtonItem key="rightBarButtonItem" image="icons8-Settings-50" width="100" id="34A-v1-dNK">
+                            <inset key="imageInsets" minX="20" minY="15" maxX="5" maxY="15"/>
                             <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -223,10 +223,14 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BhG-0I-deN" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="yzy-Gw-sjA">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="yzy-Gw-sjA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.13725490200000001" green="0.16862745100000001" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
