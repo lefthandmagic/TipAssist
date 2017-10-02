@@ -9,6 +9,7 @@
 
 import UIKit
 
+
 class ViewController: UIViewController, UITextFieldDelegate {
 
 
@@ -99,6 +100,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
         totalLabel.text = (total).format(precision: ".2")
         tipPercentageLabel.text = String("\(tipPercentage)%")
         tipPercentageSlider.value = Float(tipPercentageDouble)
+    }
+
+    @IBAction func unwindToTipAssist(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.source as? SettingsController, let defaultTip = sourceViewController.defaultTip {
+
+            tipPercentage = defaultTip
+            refreshTip()
+        }
     }
 
 }
