@@ -14,6 +14,8 @@ import DropDown
 
 class SettingsController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var dropDownView: UIView!
+
      @IBOutlet weak var defaultTipTextField: UITextField!
 
     let defaults: UserDefaults = UserDefaults.standard
@@ -37,15 +39,13 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         if (defaults.object(forKey: defaultTipKey) != nil) {
             self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
         }
-
-        let dropDown = DropDown()
-
-        // The view to which the drop down will appear on
-        dropDown.anchorView = view // UIView or UIBarButtonItem
-
-        // The list of items to display. Can be changed dynamically
-        dropDown.dataSource = ["Car", "Motorcycle", "Truck"]
-
+        print("INIT")
+//        let dropDown = DropDown()
+//        print("HOLA")
+//        dropDown.anchorView = dropDownView
+//        dropDown.dataSource = ["Car", "Motorcycle", "Truck"]
+//        print("WORLD")
+//        dropDown.width = 200
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

@@ -15,7 +15,7 @@
 		AC430F221F7B5E150055C96E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC430F211F7B5E150055C96E /* Assets.xcassets */; };
 		AC430F251F7B5E150055C96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC430F231F7B5E150055C96E /* LaunchScreen.storyboard */; };
 		AC430F2D1F7B60DC0055C96E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */; };
-		BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */; };
+		BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +24,7 @@
 		9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.release.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.release.xcconfig"; sourceTree = "<group>"; };
 		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		AC3190611F81B0F2008B62B6 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
+		AC3190651F820847008B62B6 /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC430F171F7B5E150055C96E /* TipAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC430F1A1F7B5E150055C96E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC430F1C1F7B5E150055C96E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +67,7 @@
 		AC430F0E1F7B5E150055C96E = {
 			isa = PBXGroup;
 			children = (
+				AC3190651F820847008B62B6 /* DropDown.framework */,
 				AC430F191F7B5E150055C96E /* TipAssist */,
 				AC430F181F7B5E150055C96E /* Products */,
 				7357E53252087C16161EFB76 /* Pods */,
