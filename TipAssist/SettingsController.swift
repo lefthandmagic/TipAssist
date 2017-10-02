@@ -9,6 +9,7 @@
 import Foundation
 
 import UIKit
+import DropDown
 
 
 class SettingsController: UIViewController, UITextFieldDelegate {
@@ -36,6 +37,15 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         if (defaults.object(forKey: defaultTipKey) != nil) {
             self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
         }
+
+        let dropDown = DropDown()
+
+        // The view to which the drop down will appear on
+        dropDown.anchorView = view // UIView or UIBarButtonItem
+
+        // The list of items to display. Can be changed dynamically
+        dropDown.dataSource = ["Car", "Motorcycle", "Truck"]
+
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

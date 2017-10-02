@@ -1,0 +1,12 @@
+PODS:
+  - DropDown (2)
+
+DEPENDENCIES:
+  - DropDown (= 2)
+
+SPEC CHECKSUMS:
+  DropDown: 744784d9c9aa505100e942c16acd05430cbb2f0a
+
+PODFILE CHECKSUM: 46caaedad6ffd752fb5c2b12036fd9e4bd5450f7
+
+COCOAPODS: 1.3.1

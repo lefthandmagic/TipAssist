@@ -15,9 +15,13 @@
 		AC430F221F7B5E150055C96E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC430F211F7B5E150055C96E /* Assets.xcassets */; };
 		AC430F251F7B5E150055C96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC430F231F7B5E150055C96E /* LaunchScreen.storyboard */; };
 		AC430F2D1F7B60DC0055C96E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */; };
+		BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F050E6957B4F7D4B4154981 /* Pods-TipAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.debug.xcconfig"; sourceTree = "<group>"; };
+		3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.release.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.release.xcconfig"; sourceTree = "<group>"; };
 		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
 		AC3190611F81B0F2008B62B6 /* SettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		AC430F171F7B5E150055C96E /* TipAssist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TipAssist.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70A22EABFCB69FF5457A0175 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7357E53252087C16161EFB76 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F050E6957B4F7D4B4154981 /* Pods-TipAssist.debug.xcconfig */,
+				9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AC430F0E1F7B5E150055C96E = {
 			isa = PBXGroup;
 			children = (
 				AC430F191F7B5E150055C96E /* TipAssist */,
 				AC430F181F7B5E150055C96E /* Products */,
+				7357E53252087C16161EFB76 /* Pods */,
+				70A22EABFCB69FF5457A0175 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC430F291F7B5E150055C96E /* Build configuration list for PBXNativeTarget "TipAssist" */;
 			buildPhases = (
+				405A0AB8907C068603778CEB /* [CP] Check Pods Manifest.lock */,
 				AC430F131F7B5E150055C96E /* Sources */,
 				AC430F141F7B5E150055C96E /* Frameworks */,
 				AC430F151F7B5E150055C96E /* Resources */,
+				79157F343F1D9981D7F02C41 /* [CP] Embed Pods Frameworks */,
+				F0EB8926DE4A08B3EE4BBD2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,6 +167,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		405A0AB8907C068603778CEB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TipAssist-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79157F343F1D9981D7F02C41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F0EB8926DE4A08B3EE4BBD2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AC430F131F7B5E150055C96E /* Sources */ = {
@@ -273,6 +354,7 @@
 		};
 		AC430F2A1F7B5E150055C96E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F050E6957B4F7D4B4154981 /* Pods-TipAssist.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DNQVHANQBU;
@@ -286,6 +368,7 @@
 		};
 		AC430F2B1F7B5E150055C96E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DNQVHANQBU;
