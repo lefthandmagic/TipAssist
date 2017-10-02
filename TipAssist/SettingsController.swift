@@ -15,6 +15,10 @@ class SettingsController: UIViewController, UITextFieldDelegate {
 
      @IBOutlet weak var defaultTipTextField: UITextField!
 
+    let defaults: UserDefaults = UserDefaults.standard
+
+    let defaultTipKey :String = "DEFAULT_TIP_KEY"
+
     var defaultTip: Int? {
         get {
             if let defaultTipText = defaultTipTextField?.text {
@@ -29,6 +33,9 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         self.defaultTipTextField.addDoneButtonToKeyboard(myAction:  #selector(self.defaultTipTextField.resignFirstResponder))
         self.defaultTipTextField.delegate = self
         self.defaultTipTextField.keyboardType = UIKeyboardType.decimalPad
+        if (defaults.object(forKey: defaultTipKey) != nil) {
+            self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
+        }
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -36,14 +43,10 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         return false
     }
 
-    @IBAction func setDefaultTipValue(_ sender: UITextField) {
-        defaultTipTextField.text = String(defaultTip!)
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
+        defaults.set(defaultTip!, forKey: defaultTipKey)
     }
-
-
 
 }
