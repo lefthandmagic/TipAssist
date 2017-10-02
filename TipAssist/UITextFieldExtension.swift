@@ -27,6 +27,4 @@ extension UITextField{
 
         self.inputAccessoryView = doneToolbar
     }
-
-    
 }
