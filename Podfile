@@ -6,5 +6,4 @@ target 'TipAssist' do
   use_frameworks!
 
   # Pods for TipAssist
-  pod 'DropDown', '2'
 end

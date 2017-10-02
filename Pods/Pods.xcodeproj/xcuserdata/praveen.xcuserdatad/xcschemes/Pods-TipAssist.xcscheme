@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C5E36A6C54F8998EBA8EBB1CFF9F59CF"
+               BlueprintIdentifier = "8A621AD62FBF44D64B328885C4679601"
                BuildableName = "Pods_TipAssist.framework"
                BlueprintName = "Pods-TipAssist"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C5E36A6C54F8998EBA8EBB1CFF9F59CF"
+            BlueprintIdentifier = "8A621AD62FBF44D64B328885C4679601"
             BuildableName = "Pods_TipAssist.framework"
             BlueprintName = "Pods-TipAssist"
             ReferencedContainer = "container:Pods.xcodeproj">

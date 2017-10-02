@@ -39,13 +39,6 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         if (defaults.object(forKey: defaultTipKey) != nil) {
             self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
         }
-        print("INIT")
-//        let dropDown = DropDown()
-//        print("HOLA")
-//        dropDown.anchorView = dropDownView
-//        dropDown.dataSource = ["Car", "Motorcycle", "Truck"]
-//        print("WORLD")
-//        dropDown.width = 200
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
