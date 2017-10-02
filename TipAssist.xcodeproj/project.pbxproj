@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		AC3190601F8060E8008B62B6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */; };
 		AC3190621F81B0F3008B62B6 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3190611F81B0F2008B62B6 /* SettingsController.swift */; };
-		AC3A2FF81F820C0D001B5B2D /* DropDown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC3A2FF61F820B34001B5B2D /* DropDown.framework */; };
-		AC3A2FF91F820C0D001B5B2D /* DropDown.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AC3A2FF61F820B34001B5B2D /* DropDown.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AC430F1B1F7B5E150055C96E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F1A1F7B5E150055C96E /* AppDelegate.swift */; };
 		AC430F1D1F7B5E150055C96E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F1C1F7B5E150055C96E /* ViewController.swift */; };
 		AC430F201F7B5E150055C96E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC430F1E1F7B5E150055C96E /* Main.storyboard */; };
@@ -19,20 +17,6 @@
 		AC430F2D1F7B60DC0055C96E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */; };
 		BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		AC3A2FFA1F820C0D001B5B2D /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				AC3A2FF91F820C0D001B5B2D /* DropDown.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1F050E6957B4F7D4B4154981 /* Pods-TipAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.debug.xcconfig"; sourceTree = "<group>"; };
@@ -58,7 +42,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */,
-				AC3A2FF81F820C0D001B5B2D /* DropDown.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,7 +114,6 @@
 				AC430F151F7B5E150055C96E /* Resources */,
 				79157F343F1D9981D7F02C41 /* [CP] Embed Pods Frameworks */,
 				F0EB8926DE4A08B3EE4BBD2C /* [CP] Copy Pods Resources */,
-				AC3A2FFA1F820C0D001B5B2D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
