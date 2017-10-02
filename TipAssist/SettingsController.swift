@@ -9,8 +9,6 @@
 import Foundation
 
 import UIKit
-import DropDown
-
 
 class SettingsController: UIViewController, UITextFieldDelegate {
 
