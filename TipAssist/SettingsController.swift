@@ -9,14 +9,17 @@
 import Foundation
 
 import UIKit
+import DropDown
 
 class SettingsController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var dropDownView: UIView!
 
      @IBOutlet weak var defaultTipTextField: UITextField!
 
     let defaults: UserDefaults = UserDefaults.standard
+
+    @IBOutlet weak var chooseRoundOffTextField: UITextField!
+
+    let chooseRoundOffDropDown = DropDown()
 
     let defaultTipKey :String = "DEFAULT_TIP_KEY"
 
@@ -37,6 +40,22 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         if (defaults.object(forKey: defaultTipKey) != nil) {
             self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
         }
+
+        //setup DropDown
+        chooseRoundOffDropDown.anchorView = chooseRoundOffTextField
+        chooseRoundOffDropDown.bottomOffset = CGPoint(x: 0, y: chooseRoundOffTextField.bounds.height)
+        chooseRoundOffDropDown.dataSource = [
+            "None",
+            "Round Up",
+            "Round Down"
+        ]
+        chooseRoundOffDropDown.selectionAction = { [unowned self] (index, item) in
+            self.chooseRoundOffTextField.text = item
+        }
+    }
+
+    @IBAction func showDropDown(_ sender: Any) {
+        chooseRoundOffDropDown.show()
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
