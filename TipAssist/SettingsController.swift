@@ -52,18 +52,24 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         chooseRoundOffDropDown.selectionAction = { [unowned self] (index, item) in
             self.chooseRoundOffTextField.text = item
         }
+        chooseRoundOffDropDown.direction = .bottom
     }
 
     @IBAction func showDropDown(_ sender: Any) {
         chooseRoundOffDropDown.show()
     }
 
+    /**
+     * Text field delegate callback for adding "done" action to keyboard
+     */
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
     }
 
-
+    /**
+      * Prepare to go back after saving settings
+      */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         defaults.set(defaultTip!, forKey: defaultTipKey)
