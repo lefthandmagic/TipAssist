@@ -202,7 +202,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="TipAssist" id="ILl-fQ-xDO">
                         <barButtonItem key="rightBarButtonItem" image="icons8-Settings-50" width="100" id="34A-v1-dNK">
-                            <inset key="imageInsets" minX="20" minY="15" maxX="5" maxY="15"/>
                             <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="ep7-Q0-etZ" kind="presentation" animates="NO" modalPresentationStyle="currentContext" id="ncV-xe-u6h"/>
