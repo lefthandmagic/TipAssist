@@ -22,6 +22,7 @@ class SettingsController: UIViewController, UITextFieldDelegate {
     let chooseRoundOffDropDown = DropDown()
 
     let defaultTipKey :String = "DEFAULT_TIP_KEY"
+    let defaultRoundOffOptionKey: String = "DEFAULT_ROUNDOFF_OPTION_KEY"
 
     var defaultTip: Int? {
         get {
@@ -39,6 +40,9 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         self.defaultTipTextField.keyboardType = UIKeyboardType.decimalPad
         if (defaults.object(forKey: defaultTipKey) != nil) {
             self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
+        }
+        if (defaults.object(forKey: defaultRoundOffOptionKey) != nil) {
+            self.chooseRoundOffTextField.text = defaults.string(forKey: defaultRoundOffOptionKey)
         }
 
         //setup DropDown
@@ -73,6 +77,7 @@ class SettingsController: UIViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
         defaults.set(defaultTip!, forKey: defaultTipKey)
+        defaults.set(chooseRoundOffTextField.text!, forKey: defaultRoundOffOptionKey)
     }
 
 }

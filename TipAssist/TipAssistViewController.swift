@@ -104,7 +104,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func unwindToTipAssist(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.source as? SettingsController, let defaultTip = sourceViewController.defaultTip {
-
             tipPercentage = defaultTip
             refreshTip()
         }
