@@ -57,7 +57,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     @IBAction func setTipCompute(_ sender: UIButton) {
         let tipPercentageString = sender.currentTitle!
         let end = tipPercentageString.index(tipPercentageString.endIndex, offsetBy: -1)
-        tipPercentage = Int(tipPercentageString.substring(to: end))!
+        tipPercentage = Int(tipPercentageString[..<end])!
         refreshTip()
     }
 
