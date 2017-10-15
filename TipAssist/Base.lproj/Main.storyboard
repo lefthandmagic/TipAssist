@@ -332,6 +332,9 @@
                     <connections>
                         <outlet property="chooseRoundOffTextField" destination="PkF-TM-zVh" id="ajc-Wq-zh0"/>
                         <outlet property="defaultTipTextField" destination="j2p-xL-NHI" id="hlJ-5T-hR1"/>
+                        <outlet property="quickTip1" destination="Nzk-ie-nek" id="jMF-fM-Lzq"/>
+                        <outlet property="quickTip2" destination="ZFl-ep-xeg" id="z95-YL-qNf"/>
+                        <outlet property="quickTip3" destination="MTJ-hP-hKF" id="iF2-uG-haJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIU-66-03v" userLabel="First Responder" sceneMemberID="firstResponder"/>
