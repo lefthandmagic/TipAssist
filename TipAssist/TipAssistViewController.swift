@@ -23,7 +23,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var totalLabel: UILabel!
 
-    private var tipPercentage: Int = 15
+    private var tipPercentage: Int = TipDefaults.defaultTipValue
 
     private var total: Double = 0.0
 
@@ -47,6 +47,12 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         self.billAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.billAmountTextField.resignFirstResponder))
         self.billAmountTextField.delegate = self
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
+
+        let tipControl = TipControl()
+        self.tipPercentage = tipControl.defaultTip
+        self.tipPercentageSlider.value = Float(self.tipPercentage)
+        updateUI()
+
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
