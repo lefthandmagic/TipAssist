@@ -15,24 +15,12 @@ class SettingsController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var defaultTipTextField: UITextField!
 
-    let defaults: UserDefaults = UserDefaults.standard
-
     @IBOutlet weak var chooseRoundOffTextField: UITextField!
 
     let chooseRoundOffDropDown = DropDown()
     @IBOutlet weak var quickTip1: UITextField!
     @IBOutlet weak var quickTip2: UITextField!
     @IBOutlet weak var quickTip3: UITextField!
-
-    let defaultTipKey: String = "DEFAULT_TIP_KEY"
-    let defaultRoundOffOptionKey: String = "DEFAULT_ROUNDOFF_OPTION_KEY"
-    let defaultQuickTip1: String = "QUICK_TIP_1_KEY"
-    let defaultQuickTip2: String = "QUICK_TIP_2_KEY"
-    let defaultQuickTip3: String = "QUICK_TIP_3_KEY"
-
-    let defaultQuickTip1Value = 10
-    let defaultQuickTip2Value = 15
-    let defaultQuickTip3Value = 20
 
 
     var defaultTip: Int? {
@@ -50,15 +38,15 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         switch(option) {
         case 1:
             defaultQuickTipText = quickTip1?.text
-            defaultQuickTipVal = defaultQuickTip1Value
+            defaultQuickTipVal = TipDefaults.defaultQuickTip1Value
             break
         case 2:
             defaultQuickTipText = quickTip2?.text
-            defaultQuickTipVal = defaultQuickTip2Value
+            defaultQuickTipVal = TipDefaults.defaultQuickTip2Value
             break
         case 3:
             defaultQuickTipText = quickTip3?.text
-            defaultQuickTipVal = defaultQuickTip3Value
+            defaultQuickTipVal = TipDefaults.defaultQuickTip3Value
             break
         default:
             fatalError()
@@ -85,49 +73,24 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         self.quickTip2.keyboardType = UIKeyboardType.decimalPad
         self.quickTip3.keyboardType = UIKeyboardType.decimalPad
 
-        // set default Tip text field
-        if (defaults.object(forKey: defaultTipKey) != nil) {
-            self.defaultTipTextField.text = String(defaults.integer(forKey: defaultTipKey))
-        } else {
-            self.defaultTipTextField.text = String(defaultTip!)
-        }
+        let tripControl = TipControl()
 
-        //set roundoff value
-        if (defaults.object(forKey: defaultRoundOffOptionKey) != nil) {
-            self.chooseRoundOffTextField.text = defaults.string(forKey: defaultRoundOffOptionKey)
-        } else {
-            self.chooseRoundOffTextField.text = "None"
-        }
+        self.defaultTipTextField.text = String(tripControl.defaultTip)
+
+        self.chooseRoundOffTextField.text = tripControl.roundOffOption
         //setup DropDown
         chooseRoundOffDropDown.anchorView = chooseRoundOffTextField
         chooseRoundOffDropDown.bottomOffset = CGPoint(x: 0, y: chooseRoundOffTextField.bounds.height)
-        chooseRoundOffDropDown.dataSource = [
-            "None",
-            "Round Up",
-            "Round Down"
-        ]
+        chooseRoundOffDropDown.dataSource = TipDefaults.defaultRoundOffOptions
         chooseRoundOffDropDown.selectionAction = { [unowned self] (index, item) in
             self.chooseRoundOffTextField.text = item
         }
         chooseRoundOffDropDown.direction = .bottom
 
         //setup quick tip options
-        if (defaults.object(forKey: defaultQuickTip1) != nil) {
-            self.quickTip1.text = String(defaults.integer(forKey: defaultQuickTip1))
-        } else {
-            quickTip1.text = "10"
-        }
-        if (defaults.object(forKey: defaultQuickTip2) != nil) {
-            self.quickTip2.text = String(defaults.integer(forKey: defaultQuickTip2))
-        } else {
-            quickTip2.text = "15"
-        }
-        if (defaults.object(forKey: defaultQuickTip3) != nil) {
-            self.quickTip3.text = String(defaults.integer(forKey: defaultQuickTip3))
-        } else {
-            quickTip3.text = "20"
-        }
-
+        self.quickTip1.text = String(tripControl.quickTip1)
+        self.quickTip2.text = String(tripControl.quickTip2)
+        self.quickTip3.text = String(tripControl.quickTip3)
     }
 
     @IBAction func showDropDown(_ sender: Any) {
@@ -147,11 +110,12 @@ class SettingsController: UIViewController, UITextFieldDelegate {
       */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        defaults.set(defaultTip!, forKey: defaultTipKey)
-        defaults.set(chooseRoundOffTextField.text!, forKey: defaultRoundOffOptionKey)
-        defaults.set(getQuickTip(1), forKey:defaultQuickTip1)
-        defaults.set(getQuickTip(2), forKey:defaultQuickTip2)
-        defaults.set(getQuickTip(3), forKey:defaultQuickTip3)
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.set(defaultTip!, forKey: TipDefaults.defaultTipKey)
+        defaults.set(chooseRoundOffTextField.text!, forKey: TipDefaults.defaultRoundOffOptionKey)
+        defaults.set(getQuickTip(1), forKey: TipDefaults.defaultQuickTip1)
+        defaults.set(getQuickTip(2), forKey: TipDefaults.defaultQuickTip2)
+        defaults.set(getQuickTip(3), forKey: TipDefaults.defaultQuickTip3)
     }
 
 }
