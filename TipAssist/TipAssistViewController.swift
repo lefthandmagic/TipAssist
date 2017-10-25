@@ -12,6 +12,11 @@ import UIKit
 
 class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
+    @IBOutlet weak var quickTip1Button: UIButton!
+
+    @IBOutlet weak var quickTip2Button: UIButton!
+
+    @IBOutlet weak var quickTip3Button: UIButton!
 
     @IBOutlet weak var tipPercentageSlider: UISlider!
     
@@ -24,6 +29,8 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var totalLabel: UILabel!
 
     private var tipPercentage: Int = TipDefaults.defaultTipValue
+
+    private var tipControl: TipControl = TipControl()
 
     private var total: Double = 0.0
 
@@ -50,7 +57,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
         let tipControl = TipControl()
         self.tipPercentage = tipControl.defaultTip
-        self.tipPercentageSlider.value = Float(self.tipPercentage)
         updateUI()
 
     }
@@ -105,6 +111,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         tipLabel.text = tip.format(precision: ".2")
         totalLabel.text = (total).format(precision: ".2")
         tipPercentageLabel.text = String("\(tipPercentage)%")
+
         tipPercentageSlider.value = Float(tipPercentageDouble)
     }
 

@@ -8,7 +8,7 @@
 
 import Foundation
 
-
+//Model struct of all Tip controls
 struct TipControl {
 
     let defaultTip: Int

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// all static defaults in one place
 struct TipDefaults {
 
     static let defaultTipKey: String = "DEFAULT_TIP_KEY"

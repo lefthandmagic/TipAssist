@@ -210,6 +210,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="billAmountTextField" destination="viL-nl-NrH" id="Cmt-be-AjW"/>
+                        <outlet property="quickTip1Button" destination="web-LM-6g9" id="XXj-iW-ucw"/>
+                        <outlet property="quickTip2Button" destination="2Ji-a6-KvH" id="DC7-zN-nB0"/>
+                        <outlet property="quickTip3Button" destination="aze-OQ-wIl" id="io5-2L-KPk"/>
                         <outlet property="tipLabel" destination="0sI-SS-ISh" id="Nwn-Nh-pcC"/>
                         <outlet property="tipPercentageLabel" destination="DdL-ca-EPT" id="xRt-eh-XTi"/>
                         <outlet property="tipPercentageSlider" destination="P69-nr-xgJ" id="cB4-BD-iOm"/>
