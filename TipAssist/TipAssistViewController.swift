@@ -60,20 +60,16 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         return false
     }
 
-    @IBAction func setTipCompute(_ sender: UIButton) {
+    @IBAction func computeQuickTip(_ sender: UIButton) {
         let tipPercentageString = sender.currentTitle!
         let end = tipPercentageString.index(tipPercentageString.endIndex, offsetBy: -1)
         tipControl.defaultTip = Int(tipPercentageString[..<end])!
         refreshTip()
     }
 
-    @IBAction func recomputeTip(_ sender: UISlider) {
+    @IBAction func computeCustomTip(_ sender: Any) {
         // computed with step function on 1
         tipControl.defaultTip = Int(tipPercentageSlider.value.rounded())
-        refreshTip()
-    }
-
-    @IBAction func calculateTip(_ sender: UITextField) {
         refreshTip()
     }
 
@@ -93,7 +89,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         updateUI()
     }
 
-    func refreshTip() {
+    private func refreshTip() {
         let tipPercentageDouble = Double(tipControl.defaultTip)
         tip = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
         total = billAmount + tip

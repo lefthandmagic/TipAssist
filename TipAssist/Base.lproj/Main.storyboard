@@ -41,7 +41,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert"/>
                                                 <connections>
-                                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="pQC-YB-KPp"/>
+                                                    <action selector="computeCustomTip:" destination="BYZ-38-t0r" eventType="editingChanged" id="Nd3-pM-Tcr"/>
                                                 </connections>
                                             </textField>
                                         </subviews>
@@ -56,7 +56,7 @@
                                                     <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="setTipCompute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av4-QE-Zmw"/>
+                                                    <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av4-QE-Zmw"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ji-a6-KvH">
@@ -66,7 +66,7 @@
                                                     <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="setTipCompute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1f-ue-GSp"/>
+                                                    <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1f-ue-GSp"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aze-OQ-wIl">
@@ -76,7 +76,7 @@
                                                     <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="setTipCompute:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7W-4t-Zb3"/>
+                                                    <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7W-4t-Zb3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -96,7 +96,7 @@
                                                 <color key="maximumTrackTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <color key="thumbTintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <connections>
-                                                    <action selector="recomputeTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="MnT-gk-KrA"/>
+                                                    <action selector="computeCustomTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="MnT-gk-KrA"/>
                                                 </connections>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DdL-ca-EPT">
