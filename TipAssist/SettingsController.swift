@@ -110,12 +110,12 @@ class SettingsController: UIViewController, UITextFieldDelegate {
       */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         super.prepare(for: segue, sender: sender)
-        let defaults: UserDefaults = UserDefaults.standard
-        defaults.set(defaultTip!, forKey: TipDefaults.defaultTipKey)
-        defaults.set(chooseRoundOffTextField.text!, forKey: TipDefaults.defaultRoundOffOptionKey)
-        defaults.set(getQuickTip(1), forKey: TipDefaults.defaultQuickTip1)
-        defaults.set(getQuickTip(2), forKey: TipDefaults.defaultQuickTip2)
-        defaults.set(getQuickTip(3), forKey: TipDefaults.defaultQuickTip3)
+        let tipControl = TipControl(defaultTip: defaultTip!,
+                                    quickTip1: getQuickTip(1),
+                                    quickTip2: getQuickTip(2),
+                                    quickTip3: getQuickTip(3),
+                                    roundOffOption: chooseRoundOffTextField.text!)
+        tipControl.save()
     }
 
 }

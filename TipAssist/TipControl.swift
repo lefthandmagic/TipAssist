@@ -11,11 +11,19 @@ import Foundation
 //Model struct of all Tip controls
 struct TipControl {
 
-    let defaultTip: Int
+    var defaultTip: Int
     let quickTip1: Int
     let quickTip2: Int
     let quickTip3: Int
     let roundOffOption: String
+
+    init(defaultTip: Int, quickTip1: Int, quickTip2: Int, quickTip3: Int, roundOffOption: String) {
+        self.defaultTip = defaultTip
+        self.quickTip1 = quickTip1
+        self.quickTip2 = quickTip2
+        self.quickTip3 = quickTip3
+        self.roundOffOption = roundOffOption
+    }
 
     init() {
 
@@ -50,5 +58,14 @@ struct TipControl {
         } else {
             quickTip3 = TipDefaults.defaultQuickTip3Value
         }
+    }
+
+    func save() {
+        let defaults: UserDefaults = UserDefaults.standard
+        defaults.set(defaultTip, forKey: TipDefaults.defaultTipKey)
+        defaults.set(roundOffOption, forKey: TipDefaults.defaultRoundOffOptionKey)
+        defaults.set(quickTip1, forKey: TipDefaults.defaultQuickTip1)
+        defaults.set(quickTip2, forKey: TipDefaults.defaultQuickTip2)
+        defaults.set(quickTip3, forKey: TipDefaults.defaultQuickTip3)
     }
 }

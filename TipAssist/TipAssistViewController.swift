@@ -28,8 +28,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var totalLabel: UILabel!
 
-    private var tipPercentage: Int = TipDefaults.defaultTipValue
-
     private var tipControl: TipControl = TipControl()
 
     private var total: Double = 0.0
@@ -54,11 +52,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         self.billAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.billAmountTextField.resignFirstResponder))
         self.billAmountTextField.delegate = self
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
-
-        let tipControl = TipControl()
-        self.tipPercentage = tipControl.defaultTip
         updateUI()
-
     }
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -69,13 +63,13 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     @IBAction func setTipCompute(_ sender: UIButton) {
         let tipPercentageString = sender.currentTitle!
         let end = tipPercentageString.index(tipPercentageString.endIndex, offsetBy: -1)
-        tipPercentage = Int(tipPercentageString[..<end])!
+        tipControl.defaultTip = Int(tipPercentageString[..<end])!
         refreshTip()
     }
 
     @IBAction func recomputeTip(_ sender: UISlider) {
         // computed with step function on 1
-        tipPercentage = Int(tipPercentageSlider.value.rounded())
+        tipControl.defaultTip = Int(tipPercentageSlider.value.rounded())
         refreshTip()
     }
 
@@ -100,25 +94,27 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     }
 
     func refreshTip() {
-        let tipPercentageDouble = Double(tipPercentage)
+        let tipPercentageDouble = Double(tipControl.defaultTip)
         tip = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
         total = billAmount + tip
         updateUI()
     }
 
     private func updateUI() {
-        let tipPercentageDouble = Double(tipPercentage)
+        let tipPercentageDouble = Double(tipControl.defaultTip)
         tipLabel.text = tip.format(precision: ".2")
         totalLabel.text = (total).format(precision: ".2")
-        tipPercentageLabel.text = String("\(tipPercentage)%")
-
+        tipPercentageLabel.text = String("\(tipControl.defaultTip)%")
         tipPercentageSlider.value = Float(tipPercentageDouble)
+        quickTip1Button.setTitle(String("\(tipControl.quickTip1)%"), for: .normal)
+        quickTip2Button.setTitle(String("\(tipControl.quickTip2)%"), for: .normal)
+        quickTip3Button.setTitle(String("\(tipControl.quickTip3)%"), for: .normal)
     }
 
     @IBAction func unwindToTipAssist(sender: UIStoryboardSegue) {
         if sender.source is SettingsController {
-            let tipControl = TipControl()
-            tipPercentage = tipControl.defaultTip
+            tipControl = TipControl()
+            updateUI()
             refreshTip()
         }
     }
