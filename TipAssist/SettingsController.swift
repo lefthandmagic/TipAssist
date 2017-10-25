@@ -32,7 +32,11 @@ class SettingsController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    func getQuickTip(_ option: Int) -> Int {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+
+    private func getQuickTip(_ option: Int) -> Int {
         var defaultQuickTipText: String?
         var defaultQuickTipVal: Int = 0
         switch(option) {
