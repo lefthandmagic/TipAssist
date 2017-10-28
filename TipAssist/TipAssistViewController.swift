@@ -103,9 +103,9 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
                 refreshTip()
             tipDisplayViewController.tipAmount = tip
             tipDisplayViewController.totalAmount = total
-
             tipDisplayViewController.tipPercentage = Double(tipControl.defaultTip)
             tipDisplayViewController.billAmount = billAmount
+            tipDisplayViewController.tipRoundOffOption = tipControl.roundOffOption
         }
     }
 

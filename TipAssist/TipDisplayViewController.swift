@@ -16,13 +16,30 @@ class TipDisplayViewController: UIViewController {
 
     @IBOutlet weak var totalAmountLabel: UILabel!
 
+    @IBOutlet weak var roundUpButton: UIButton!
+
+    @IBOutlet weak var roundDownButton: UIButton!
+
     var tipAmount: Double?
     var totalAmount: Double?
-    var tipPercentage: Double?
     var billAmount: Double?
+    var tipPercentage: Double?
+    var tipRoundOffOption: TipControl.RoundOffOption?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+
+        // update roundoff UX
+        switch(tipRoundOffOption!) {
+        case TipControl.RoundOffOption.NONE:
+            break
+        case TipControl.RoundOffOption.ROUND_DOWN:
+            roundDownButton.isHighlighted = true
+        case TipControl.RoundOffOption.ROUND_UP:
+            roundUpButton.isHighlighted = true
+        }
+
         updateUI()
     }
 
@@ -32,7 +49,7 @@ class TipDisplayViewController: UIViewController {
         let tipDiff = roundUpTotal! - totalAmount!
         tipAmount = tipAmount! + tipDiff
         totalAmount = roundUpTotal
-        tipPercentage = tipAmount!/billAmount! * 100
+        tipPercentage = (billAmount! > 0) ? tipAmount!/billAmount! * 100 : tipPercentage
         updateUI()
     }
 
@@ -41,7 +58,7 @@ class TipDisplayViewController: UIViewController {
         let tipDiff = totalAmount! - roundDownTotal!
         tipAmount = tipAmount! - tipDiff
         totalAmount = roundDownTotal!
-        tipPercentage = tipAmount!/billAmount! * 100
+        tipPercentage = (billAmount! > 0) ? tipAmount!/billAmount! * 100 : tipPercentage
         updateUI()
     }
 
