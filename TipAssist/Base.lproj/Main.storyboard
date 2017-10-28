@@ -48,7 +48,7 @@
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="10%">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Av4-QE-Zmw"/>
@@ -60,7 +60,7 @@
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="15%">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b1f-ue-GSp"/>
@@ -72,7 +72,7 @@
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
                                                 <state key="normal" title="20%">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="computeQuickTip:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p7W-4t-Zb3"/>
@@ -104,7 +104,7 @@
                                                 <attributedString key="attributedText">
                                                     <fragment content=" 15%">
                                                         <attributes>
-                                                            <color key="NSColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="NSColor" red="0.8901960784313725" green="0.68235294117647061" blue="0.3411764705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <font key="NSFont" size="17" name="ArialNarrow-Bold"/>
                                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                         </attributes>
@@ -122,7 +122,7 @@
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                                 <state key="normal" title="Calculate Tip">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <segue destination="dAV-BU-zAM" kind="show" id="POM-04-5GM"/>
@@ -144,7 +144,7 @@
                     <navigationItem key="navigationItem" title="TipAssist" id="ILl-fQ-xDO">
                         <barButtonItem key="rightBarButtonItem" image="icons8-Settings-50" width="30" id="34A-v1-dNK">
                             <inset key="imageInsets" minX="0.0" minY="5" maxX="1" maxY="-3"/>
-                            <color key="tintColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="ep7-Q0-etZ" kind="presentation" animates="NO" modalPresentationStyle="currentContext" id="ncV-xe-u6h"/>
                             </connections>
@@ -284,7 +284,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="71D-v8-Dbn">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="OSM-n7-xwE">
-                            <color key="tintColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="WX7-o9-kL6" kind="unwind" unwindAction="unwindToTipAssistWithSender:" id="y7S-LV-OKi"/>
                             </connections>
@@ -386,7 +386,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="139" height="30"/>
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Round Up">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="roundUp:" destination="dAV-BU-zAM" eventType="touchUpInside" id="TTv-D9-xgd"/>
@@ -396,7 +396,7 @@
                                                 <rect key="frame" x="149" y="0.0" width="139" height="30"/>
                                                 <color key="backgroundColor" red="0.66274509800000003" green="0.66274509800000003" blue="0.66274509800000003" alpha="0.29850706339999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <state key="normal" title="Round Down">
-                                                    <color key="titleColor" red="1" green="1" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="roundDown:" destination="dAV-BU-zAM" eventType="touchUpInside" id="mHE-XS-ZbR"/>
