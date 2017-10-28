@@ -106,7 +106,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
             tipDisplayViewController.tipPercentage = Double(tipControl.defaultTip)
             tipDisplayViewController.billAmount = billAmount
-
         }
     }
 
