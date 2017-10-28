@@ -22,12 +22,5 @@ struct TipDefaults {
     static let defaultQuickTip3Value = 20
 
     static let defaultTipValue = 15
-    static let defaultRoundOffOptionValue = "None"
-
-    static let defaultRoundOffOptions = [
-        defaultRoundOffOptionValue,
-        "Round Up",
-        "Round Down"
-    ]
 
 }

@@ -48,8 +48,9 @@ class TipDisplayViewController: UIViewController {
     private func updateUI() {
         tipAmountLabel.text = tipAmount?.format(precision: ".2")
         totalAmountLabel.text = totalAmount?.format(precision: ".2")
+        let billAmountString = billAmount?.format(precision: ".2")
         let tipPercentageString = tipPercentage?.format(precision: ".2")
-        tipDisplayHeader.text = String("\(tipPercentageString!) % tip of \(billAmount!) bill")
+        tipDisplayHeader.text = String("\(tipPercentageString!) % tip of \(billAmountString!) bill")
     }
 
 }

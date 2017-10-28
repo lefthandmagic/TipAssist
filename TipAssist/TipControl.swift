@@ -11,18 +11,24 @@ import Foundation
 //Model struct of all Tip controls
 struct TipControl {
 
+    enum RoundOffOption: String {
+        case NONE = "None"
+        case ROUND_UP = "Round Up"
+        case ROUND_DOWN = "Round Down"
+    }
+
     var defaultTip: Int
     let quickTip1: Int
     let quickTip2: Int
     let quickTip3: Int
-    let roundOffOption: String
+    let roundOffOption: RoundOffOption
 
     init(defaultTip: Int, quickTip1: Int, quickTip2: Int, quickTip3: Int, roundOffOption: String) {
         self.defaultTip = defaultTip
         self.quickTip1 = quickTip1
         self.quickTip2 = quickTip2
         self.quickTip3 = quickTip3
-        self.roundOffOption = roundOffOption
+        self.roundOffOption = TipControl.getRoundOffOption(roundOffOption: roundOffOption)
     }
 
     init() {
@@ -37,9 +43,10 @@ struct TipControl {
 
         //set roundoff value
         if (defaults.object(forKey: TipDefaults.defaultRoundOffOptionKey) != nil) {
-            self.roundOffOption = defaults.string(forKey: TipDefaults.defaultRoundOffOptionKey)!
+            let roundOffOptionString = defaults.string(forKey: TipDefaults.defaultRoundOffOptionKey)!
+            self.roundOffOption = TipControl.getRoundOffOption(roundOffOption: roundOffOptionString)
         } else {
-            self.roundOffOption = TipDefaults.defaultRoundOffOptionValue
+            self.roundOffOption = RoundOffOption.NONE
         }
 
         //setup quick tip options
@@ -60,10 +67,25 @@ struct TipControl {
         }
     }
 
+    static func getRoundOffOption(roundOffOption: String) -> RoundOffOption {
+        let roundOffVal: RoundOffOption
+        switch (roundOffOption) {
+        case RoundOffOption.NONE.rawValue:
+            roundOffVal = RoundOffOption.NONE
+        case RoundOffOption.ROUND_UP.rawValue:
+            roundOffVal = RoundOffOption.ROUND_UP
+        case RoundOffOption.ROUND_DOWN.rawValue:
+            roundOffVal = RoundOffOption.ROUND_DOWN
+        default:
+            fatalError()
+        }
+        return roundOffVal
+    }
+
     func save() {
         let defaults: UserDefaults = UserDefaults.standard
         defaults.set(defaultTip, forKey: TipDefaults.defaultTipKey)
-        defaults.set(roundOffOption, forKey: TipDefaults.defaultRoundOffOptionKey)
+        defaults.set(roundOffOption.rawValue, forKey: TipDefaults.defaultRoundOffOptionKey)
         defaults.set(quickTip1, forKey: TipDefaults.defaultQuickTip1)
         defaults.set(quickTip2, forKey: TipDefaults.defaultQuickTip2)
         defaults.set(quickTip3, forKey: TipDefaults.defaultQuickTip3)
