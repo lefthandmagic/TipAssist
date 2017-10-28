@@ -73,22 +73,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         refreshTip()
     }
 
-    @IBAction func roundUp(_ sender: UIButton) {
-        let roundUpTotal = total.rounded(FloatingPointRoundingRule.up)
-        let tipDiff = roundUpTotal - total
-        tip = tip + tipDiff
-        total = roundUpTotal
-        updateUI()
-    }
-
-    @IBAction func roundDown(_ sender: Any) {
-        let roundDownTotal = total.rounded(FloatingPointRoundingRule.down)
-        let tipDiff = total - roundDownTotal
-        tip = tip - tipDiff
-        total = roundDownTotal
-        updateUI()
-    }
-
     private func refreshTip() {
         let tipPercentageDouble = Double(tipControl.defaultTip)
         tip = (billAmount * tipPercentageDouble/100).rounded(toPlaces: 2)
@@ -98,8 +82,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     private func updateUI() {
         let tipPercentageDouble = Double(tipControl.defaultTip)
-        tipLabel.text = tip.format(precision: ".2")
-        totalLabel.text = (total).format(precision: ".2")
         tipPercentageLabel.text = String("\(tipControl.defaultTip)%")
         tipPercentageSlider.value = Float(tipPercentageDouble)
         quickTip1Button.setTitle(String("\(tipControl.quickTip1)%"), for: .normal)
@@ -112,6 +94,19 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
             tipControl = TipControl()
             updateUI()
             refreshTip()
+        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationViewController = segue.destination
+        if let tipDisplayViewController = destinationViewController as? TipDisplayViewController {
+                refreshTip()
+            tipDisplayViewController.tipAmount = tip
+            tipDisplayViewController.totalAmount = total
+
+            tipDisplayViewController.tipPercentage = Double(tipControl.defaultTip)
+            tipDisplayViewController.billAmount = billAmount
+
         }
     }
 
