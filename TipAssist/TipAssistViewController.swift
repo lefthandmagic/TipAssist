@@ -55,10 +55,6 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         updateUI()
     }
 
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.view.endEditing(true)
-        return false
-    }
 
     @IBAction func computeQuickTip(_ sender: UIButton) {
         let tipPercentageString = sender.currentTitle!
@@ -108,6 +104,37 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
             tipDisplayViewController.tipRoundOffOption = tipControl.roundOffOption
         }
     }
+
+    // UI Text delegate methods below
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let inverseSet = NSCharacterSet(charactersIn:"0123456789").inverted
+        let components = string.components(separatedBy: inverseSet)
+        let filtered = components.joined(separator: "")
+        if filtered == string {
+            return true
+        } else {
+            if string == "." {
+                let countdots = textField.text!.components(separatedBy:".").count - 1
+                if countdots == 0 {
+                    return true
+                }else{
+                    if countdots > 0 && string == "." {
+                        return false
+                    } else {
+                        return true
+                    }
+                }
+            }else{
+                return false
+            }
+        }
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+
 
 }
 

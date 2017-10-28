@@ -29,18 +29,18 @@ class TipDisplayViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
         // update roundoff UX
         switch(tipRoundOffOption!) {
         case TipControl.RoundOffOption.NONE:
-            break
+            updateUI()
         case TipControl.RoundOffOption.ROUND_DOWN:
             roundDownButton.isHighlighted = true
+            roundDown(roundDownButton)
         case TipControl.RoundOffOption.ROUND_UP:
             roundUpButton.isHighlighted = true
+            roundUp(roundUpButton)
         }
 
-        updateUI()
     }
 
 
