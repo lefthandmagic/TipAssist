@@ -18,6 +18,7 @@
 		AC430F251F7B5E150055C96E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC430F231F7B5E150055C96E /* LaunchScreen.storyboard */; };
 		AC430F2D1F7B60DC0055C96E /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */; };
 		AC684C9B1F92FFF5009BF9E8 /* TipControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC684C9A1F92FFF5009BF9E8 /* TipControl.swift */; };
+		AC838E931FA5D8DE005EF147 /* TipDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC838E921FA5D8DE005EF147 /* TipDisplay.swift */; };
 		BB6CDBBA0A2979077C85F5B8 /* Pods_TipAssist.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		AC430F261F7B5E150055C96E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC430F2C1F7B60DC0055C96E /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		AC684C9A1F92FFF5009BF9E8 /* TipControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipControl.swift; sourceTree = "<group>"; };
+		AC838E921FA5D8DE005EF147 /* TipDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDisplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				AC684C9A1F92FFF5009BF9E8 /* TipControl.swift */,
 				AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */,
 				AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */,
+				AC838E921FA5D8DE005EF147 /* TipDisplay.swift */,
 			);
 			path = TipAssist;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3190601F8060E8008B62B6 /* DoubleExtension.swift in Sources */,
+				AC838E931FA5D8DE005EF147 /* TipDisplay.swift in Sources */,
 				AC3190621F81B0F3008B62B6 /* SettingsController.swift in Sources */,
 				AC430F1D1F7B5E150055C96E /* TipAssistViewController.swift in Sources */,
 				AC2405DF1FA2178800EF50AF /* TipDisplayViewController.swift in Sources */,

@@ -24,7 +24,6 @@ extension UITextField{
 
         doneToolbar.items = items
         doneToolbar.sizeToFit()
-
         self.inputAccessoryView = doneToolbar
     }
 }

@@ -97,11 +97,11 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         let destinationViewController = segue.destination
         if let tipDisplayViewController = destinationViewController as? TipDisplayViewController {
                 refreshTip()
-            tipDisplayViewController.tipAmount = tip
-            tipDisplayViewController.totalAmount = total
-            tipDisplayViewController.tipPercentage = Double(tipControl.defaultTip)
-            tipDisplayViewController.billAmount = billAmount
-            tipDisplayViewController.tipRoundOffOption = tipControl.roundOffOption
+            tipDisplayViewController.tipDisplay = TipDisplay(tipAmount: tip,
+                                                             totalAmount: total,
+                                                             billAmount: billAmount,
+                                                             tipPercentage: Double(tipControl.defaultTip),
+                                                             roundOffOption: tipControl.roundOffOption)
         }
     }
 

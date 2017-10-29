@@ -20,17 +20,13 @@ class TipDisplayViewController: UIViewController {
 
     @IBOutlet weak var roundDownButton: UIButton!
 
-    var tipAmount: Double?
-    var totalAmount: Double?
-    var billAmount: Double?
-    var tipPercentage: Double?
-    var tipRoundOffOption: TipControl.RoundOffOption?
+    var tipDisplay: TipDisplay?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // update roundoff UX
-        switch(tipRoundOffOption!) {
+        switch(tipDisplay!.tipRoundOffOption) {
         case TipControl.RoundOffOption.NONE:
             updateUI()
         case TipControl.RoundOffOption.ROUND_DOWN:
@@ -40,34 +36,33 @@ class TipDisplayViewController: UIViewController {
             roundUpButton.isHighlighted = true
             roundUp(roundUpButton)
         }
-
     }
 
 
     @IBAction func roundUp(_ sender: UIButton) {
-        let roundUpTotal = totalAmount?.rounded(FloatingPointRoundingRule.up)
-        let tipDiff = roundUpTotal! - totalAmount!
-        tipAmount = tipAmount! + tipDiff
-        totalAmount = roundUpTotal
-        tipPercentage = (billAmount! > 0) ? tipAmount!/billAmount! * 100 : tipPercentage
+        let roundUpTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.up)
+        let tipDiff = roundUpTotal - tipDisplay!.totalAmount
+        tipDisplay!.tipAmount = tipDisplay!.tipAmount + tipDiff
+        tipDisplay!.totalAmount = roundUpTotal
+        tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
         updateUI()
     }
 
     @IBAction func roundDown(_ sender: Any) {
-        let roundDownTotal = totalAmount?.rounded(FloatingPointRoundingRule.down)
-        let tipDiff = totalAmount! - roundDownTotal!
-        tipAmount = tipAmount! - tipDiff
-        totalAmount = roundDownTotal!
-        tipPercentage = (billAmount! > 0) ? tipAmount!/billAmount! * 100 : tipPercentage
+        let roundDownTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.down)
+        let tipDiff = tipDisplay!.totalAmount - roundDownTotal
+        tipDisplay!.tipAmount = tipDisplay!.tipAmount - tipDiff
+        tipDisplay!.totalAmount = roundDownTotal
+        tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
         updateUI()
     }
 
     private func updateUI() {
-        tipAmountLabel.text = tipAmount?.format(precision: ".2")
-        totalAmountLabel.text = totalAmount?.format(precision: ".2")
-        let billAmountString = billAmount?.format(precision: ".2")
-        let tipPercentageString = tipPercentage?.format(precision: ".2")
-        tipDisplayHeader.text = String("\(tipPercentageString!) % tip of \(billAmountString!) bill")
+        tipAmountLabel.text = tipDisplay!.tipAmount.format(precision: ".2")
+        totalAmountLabel.text = tipDisplay!.totalAmount.format(precision: ".2")
+        let billAmountString = tipDisplay!.billAmount.format(precision: ".2")
+        let tipPercentageString = tipDisplay!.tipPercentage.format(precision: ".2")
+        tipDisplayHeader.text = String("\(tipPercentageString) % tip of \(billAmountString) bill")
     }
 
 }
