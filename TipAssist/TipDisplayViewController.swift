@@ -20,40 +20,79 @@ class TipDisplayViewController: UIViewController {
 
     @IBOutlet weak var roundDownButton: UIButton!
 
+    var defaultButtonColor: UIColor?
+
     var tipDisplay: TipDisplay?
+
+    var originalTipDisplay: TipDisplay?
+
+    var isRoundUpSet: Bool = false
+    var isRoundDownSet:Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // update roundoff UX
+        defaultButtonColor = roundUpButton.titleColor(for: .normal)
+
         switch(tipDisplay!.tipRoundOffOption) {
         case TipControl.RoundOffOption.NONE:
             updateUI()
         case TipControl.RoundOffOption.ROUND_DOWN:
-            roundDownButton.isHighlighted = true
             roundDown(roundDownButton)
         case TipControl.RoundOffOption.ROUND_UP:
-            roundUpButton.isHighlighted = true
             roundUp(roundUpButton)
         }
     }
 
 
     @IBAction func roundUp(_ sender: UIButton) {
-        let roundUpTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.up)
-        let tipDiff = roundUpTotal - tipDisplay!.totalAmount
-        tipDisplay!.tipAmount = tipDisplay!.tipAmount + tipDiff
-        tipDisplay!.totalAmount = roundUpTotal
-        tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
+        if isRoundUpSet  {
+            tipDisplay = originalTipDisplay
+            isRoundUpSet = false
+            //change color to unset
+            roundUpButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
+            roundUpButton.layer.cornerRadius = 0
+        } else if(!isRoundUpSet && !isRoundDownSet) {
+            originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
+                                            totalAmount: tipDisplay!.totalAmount,
+                                            billAmount: tipDisplay!.billAmount,
+                                            tipPercentage: tipDisplay!.tipPercentage,
+                                            roundOffOption: tipDisplay!.tipRoundOffOption)
+
+            let roundUpTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.up)
+            let tipDiff = roundUpTotal - tipDisplay!.totalAmount
+            tipDisplay!.tipAmount = tipDisplay!.tipAmount + tipDiff
+            tipDisplay!.totalAmount = roundUpTotal
+            tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
+            isRoundUpSet = true
+            roundUpButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
+            roundUpButton.layer.cornerRadius = 10
+        }
         updateUI()
     }
 
     @IBAction func roundDown(_ sender: Any) {
+        if isRoundDownSet {
+            tipDisplay = originalTipDisplay
+            isRoundDownSet = false
+            roundDownButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
+            roundDownButton.layer.cornerRadius = 0
+        } else if (!isRoundDownSet && !isRoundUpSet) {
+        originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
+                                        totalAmount: tipDisplay!.totalAmount,
+                                        billAmount: tipDisplay!.billAmount,
+                                        tipPercentage: tipDisplay!.tipPercentage,
+                                        roundOffOption: tipDisplay!.tipRoundOffOption)
+
         let roundDownTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.down)
         let tipDiff = tipDisplay!.totalAmount - roundDownTotal
         tipDisplay!.tipAmount = tipDisplay!.tipAmount - tipDiff
         tipDisplay!.totalAmount = roundDownTotal
         tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
+            isRoundDownSet = true
+            roundDownButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
+            roundDownButton.layer.cornerRadius = 10
+        }
         updateUI()
     }
 
