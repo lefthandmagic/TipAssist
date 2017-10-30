@@ -300,9 +300,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-rJ-ky1">
-                                <rect key="frame" x="270" y="458" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-rJ-ky1">
+                                <rect key="frame" x="282" y="474" width="22" height="22"/>
                                 <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -317,6 +316,8 @@
                             <constraint firstItem="oL0-25-iiw" firstAttribute="leading" secondItem="zTk-QK-rjG" secondAttribute="leading" constant="20" symbolic="YES" id="Ln2-6l-UwY"/>
                             <constraint firstAttribute="trailing" secondItem="oL0-25-iiw" secondAttribute="trailing" constant="20" symbolic="YES" id="Rmj-Ub-fjH"/>
                             <constraint firstItem="oL0-25-iiw" firstAttribute="top" secondItem="oiV-I0-uOt" secondAttribute="bottom" constant="30" id="f2k-mF-Cmw"/>
+                            <constraint firstItem="MEu-K7-4B1" firstAttribute="top" secondItem="gwn-rJ-ky1" secondAttribute="bottom" constant="8" symbolic="YES" id="qMX-Wg-R2s"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gwn-rJ-ky1" secondAttribute="trailing" id="vaU-IR-dQ9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="71D-v8-Dbn">
