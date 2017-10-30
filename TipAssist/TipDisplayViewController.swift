@@ -100,8 +100,8 @@ class TipDisplayViewController: UIViewController {
         tipAmountLabel.text = tipDisplay!.tipAmount.format(precision: ".2")
         totalAmountLabel.text = tipDisplay!.totalAmount.format(precision: ".2")
         let billAmountString = tipDisplay!.billAmount.format(precision: ".2")
-        let tipPercentageString = tipDisplay!.tipPercentage.format(precision: ".2")
-        tipDisplayHeader.text = String("\(tipPercentageString) % tip of \(billAmountString) bill")
+        let tipPercentageString = tipDisplay!.tipPercentage.format(precision: ".1")
+        tipDisplayHeader.text = String("\(tipPercentageString) % tip for \(billAmountString) bill")
     }
 
 }
