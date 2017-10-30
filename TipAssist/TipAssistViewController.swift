@@ -48,10 +48,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         self.billAmountTextField.delegate = self
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
 
-        let logo = UIImage(named: "tipez_80_80.png")
-        let imageView = UIImageView(image: logo)
-        imageView.contentMode = .scaleAspectFill // set imageview's content mode
-        self.navigationItem.titleView = imageView
+        self.navigationItem.titleView = TipDefaults.getNavTitleImage()
         updateUI()
     }
 

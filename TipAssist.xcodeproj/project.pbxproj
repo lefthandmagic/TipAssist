@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AC1211A11FA739D300B44711 /* tipez_80_80.png in Resources */ = {isa = PBXBuildFile; fileRef = AC12119F1FA739D300B44711 /* tipez_80_80.png */; };
+		AC1211A41FA7778C00B44711 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1211A31FA7778C00B44711 /* ContactViewController.swift */; };
 		AC2405DD1F9DEFE800EF50AF /* TipDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */; };
 		AC2405DF1FA2178800EF50AF /* TipDisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */; };
 		AC3190601F8060E8008B62B6 /* DoubleExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */; };
@@ -29,6 +30,7 @@
 		3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.release.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.release.xcconfig"; sourceTree = "<group>"; };
 		AC12119F1FA739D300B44711 /* tipez_80_80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tipez_80_80.png; sourceTree = "<group>"; };
+		AC1211A31FA7778C00B44711 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDefaults.swift; sourceTree = "<group>"; };
 		AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDisplayViewController.swift; sourceTree = "<group>"; };
 		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */,
 				AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */,
 				AC838E921FA5D8DE005EF147 /* TipDisplay.swift */,
+				AC1211A31FA7778C00B44711 /* ContactViewController.swift */,
 			);
 			path = TipAssist;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				AC2405DD1F9DEFE800EF50AF /* TipDefaults.swift in Sources */,
 				AC430F1B1F7B5E150055C96E /* AppDelegate.swift in Sources */,
 				AC684C9B1F92FFF5009BF9E8 /* TipControl.swift in Sources */,
+				AC1211A41FA7778C00B44711 /* ContactViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

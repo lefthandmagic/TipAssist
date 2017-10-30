@@ -300,6 +300,17 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gwn-rJ-ky1">
+                                <rect key="frame" x="270" y="458" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal">
+                                    <color key="titleColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6Ey-Ip-sQg" kind="show" id="TCN-1S-XoR"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -328,6 +339,37 @@
                 <exit id="WX7-o9-kL6" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3095.1999999999998" y="71.514242878560722"/>
+        </scene>
+        <!--Contact View Controller-->
+        <scene sceneID="vtg-gv-MEV">
+            <objects>
+                <viewController id="6Ey-Ip-sQg" customClass="ContactViewController" customModule="TipAssist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hzh-uo-Ktd"/>
+                        <viewControllerLayoutGuide type="bottom" id="qMY-E8-Dyf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6g8-bG-aXm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-8a-5oU">
+                                <rect key="frame" x="19" y="193" width="282" height="118.5"/>
+                                <string key="text">Hey Everyone,  My name is Praveen! This is my first ever app on the appstore  Hope y'all enjoy it. If you have any feedback or wish to report any issues, please send me an email at,  lefthandmagic@gmail.com  </string>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.13725490196078433" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="peN-8a-5oU" firstAttribute="centerY" secondItem="6g8-bG-aXm" secondAttribute="centerY" id="4n5-qw-37C"/>
+                            <constraint firstItem="peN-8a-5oU" firstAttribute="centerX" secondItem="6g8-bG-aXm" secondAttribute="centerX" id="wS2-D4-uvk"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1U1-ZN-HKP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4072.5" y="316.90140845070425"/>
         </scene>
         <!--Tip Display View Controller-->
         <scene sceneID="3eu-Qa-p3E">
@@ -524,4 +566,5 @@
     <inferredMetricsTieBreakers>
         <segue reference="POM-04-5GM"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
 </document>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 // all static defaults in one place
 struct TipDefaults {
@@ -22,5 +23,12 @@ struct TipDefaults {
     static let defaultQuickTip3Value = 20
 
     static let defaultTipValue = 15
+
+    static func getNavTitleImage() -> UIImageView  {
+        let logo = UIImage(named: "tipez_80_80.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFill // set imageview's content mode
+        return imageView
+    }
 
 }
