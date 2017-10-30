@@ -9,7 +9,6 @@
 
 import UIKit
 
-
 class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var quickTip1Button: UIButton!
@@ -49,12 +48,10 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         self.billAmountTextField.delegate = self
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
 
-        let logo = UIImage(named: "tipez_source.png")
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = logo
+        let logo = UIImage(named: "tipez_80_80.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFill // set imageview's content mode
         self.navigationItem.titleView = imageView
-
         updateUI()
     }
 

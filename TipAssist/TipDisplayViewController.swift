@@ -42,6 +42,11 @@ class TipDisplayViewController: UIViewController {
         case TipControl.RoundOffOption.ROUND_UP:
             roundUp(roundUpButton)
         }
+
+        let logo = UIImage(named: "tipez_80_80.png")
+        let imageView = UIImageView(image: logo)
+        imageView.contentMode = .scaleAspectFill // set imageview's content mode
+        self.navigationItem.titleView = imageView
     }
 
 
