@@ -21,14 +21,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="artwork-source.png" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-bB-64v">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tipez.png" translatesAutoresizingMaskIntoConstraints="NO" id="dH0-f2-wLB">
                                 <rect key="frame" x="56.5" y="202.5" width="261" height="261"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="e5u-bB-64v" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="bKq-ya-0fZ"/>
-                            <constraint firstItem="e5u-bB-64v" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="kPc-Vi-Jmp"/>
+                            <constraint firstItem="dH0-f2-wLB" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="nGr-Tb-exW"/>
+                            <constraint firstItem="dH0-f2-wLB" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xAF-Gn-Cpi"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="artwork-source.png" width="261" height="261"/>
+        <image name="tipez.png" width="261" height="261"/>
     </resources>
 </document>
