@@ -26,7 +26,7 @@
 		1F050E6957B4F7D4B4154981 /* Pods-TipAssist.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.debug.xcconfig"; sourceTree = "<group>"; };
 		3338FB636C53DDF892DCED62 /* Pods_TipAssist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TipAssist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B94783E31B21287B3E143A4 /* Pods-TipAssist.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TipAssist.release.xcconfig"; path = "Pods/Target Support Files/Pods-TipAssist/Pods-TipAssist.release.xcconfig"; sourceTree = "<group>"; };
-		AC09B2D51FA71E5B0004A02F /* tipez_source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tipez_source.png; sourceTree = "<group>"; };
+		AC09B2D71FA726BD0004A02F /* artwork-source.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artwork-source.png"; sourceTree = "<group>"; };
 		AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDefaults.swift; sourceTree = "<group>"; };
 		AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDisplayViewController.swift; sourceTree = "<group>"; };
 		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
@@ -85,7 +85,7 @@
 		AC09B2CA1FA70F9C0004A02F /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				AC09B2D51FA71E5B0004A02F /* tipez_source.png */,
+				AC09B2D71FA726BD0004A02F /* artwork-source.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";

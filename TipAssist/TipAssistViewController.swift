@@ -52,6 +52,13 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         self.billAmountTextField.addDoneButtonToKeyboard(myAction:  #selector(self.billAmountTextField.resignFirstResponder))
         self.billAmountTextField.delegate = self
         self.billAmountTextField.keyboardType = UIKeyboardType.decimalPad
+
+        let logo = UIImage(named: "tipez_source.png")
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 38, height: 38))
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = logo
+        self.navigationItem.titleView = imageView
+
         updateUI()
     }
 

@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TipAssist-->
+        <!--Tip Assist View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TipAssistViewController" customModule="TipAssist" customModuleProvider="target" sceneMemberID="viewController">
@@ -161,7 +161,7 @@
                             <constraint firstAttribute="leadingMargin" secondItem="lqL-Go-GIz" secondAttribute="leading" id="pz3-7S-r1T"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TipAssist" id="ILl-fQ-xDO">
+                    <navigationItem key="navigationItem" id="ILl-fQ-xDO">
                         <barButtonItem key="rightBarButtonItem" image="icons8-Settings-50" width="30" id="34A-v1-dNK">
                             <inset key="imageInsets" minX="0.0" minY="5" maxX="1" maxY="-3"/>
                             <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -522,6 +522,6 @@
         <image name="icons8-Settings-50" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fbl-Om-UH3"/>
+        <segue reference="POM-04-5GM"/>
     </inferredMetricsTieBreakers>
 </document>
