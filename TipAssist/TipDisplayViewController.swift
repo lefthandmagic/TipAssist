@@ -51,7 +51,6 @@ class TipDisplayViewController: UIViewController {
             isRoundUpSet = false
             //change color to unset
             roundUpButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
-            roundUpButton.layer.cornerRadius = 0
         } else if(!isRoundUpSet && !isRoundDownSet) {
             originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
                                             totalAmount: tipDisplay!.totalAmount,
@@ -66,7 +65,6 @@ class TipDisplayViewController: UIViewController {
             tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
             isRoundUpSet = true
             roundUpButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
-            roundUpButton.layer.cornerRadius = 10
         }
         updateUI()
     }
@@ -76,7 +74,6 @@ class TipDisplayViewController: UIViewController {
             tipDisplay = originalTipDisplay
             isRoundDownSet = false
             roundDownButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
-            roundDownButton.layer.cornerRadius = 0
         } else if (!isRoundDownSet && !isRoundUpSet) {
         originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
                                         totalAmount: tipDisplay!.totalAmount,
@@ -91,7 +88,6 @@ class TipDisplayViewController: UIViewController {
         tipDisplay!.tipPercentage = (tipDisplay!.billAmount > 0) ? tipDisplay!.tipAmount/tipDisplay!.billAmount * 100 : tipDisplay!.tipPercentage
             isRoundDownSet = true
             roundDownButton.setTitleColor(UIColor.gray, for: UIControlState.normal)
-            roundDownButton.layer.cornerRadius = 10
         }
         updateUI()
     }
