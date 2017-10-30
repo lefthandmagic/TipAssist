@@ -15,7 +15,8 @@ class SettingsController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var defaultTipTextField: UITextField!
 
-    @IBOutlet weak var chooseRoundOffTextField: UITextField!
+    @IBOutlet weak var chooseRoundOffButton: UIButton!
+
 
     let chooseRoundOffDropDown = DropDown()
     @IBOutlet weak var quickTip1: UITextField!
@@ -81,15 +82,15 @@ class SettingsController: UIViewController, UITextFieldDelegate {
 
         self.defaultTipTextField.text = String(tripControl.defaultTip)
 
-        self.chooseRoundOffTextField.text = tripControl.roundOffOption.rawValue
+        self.chooseRoundOffButton.setTitle(tripControl.roundOffOption.rawValue, for: .normal)
         //setup DropDown
-        chooseRoundOffDropDown.anchorView = chooseRoundOffTextField
-        chooseRoundOffDropDown.bottomOffset = CGPoint(x: 0, y: chooseRoundOffTextField.bounds.height)
+        chooseRoundOffDropDown.anchorView = chooseRoundOffButton
+        chooseRoundOffDropDown.bottomOffset = CGPoint(x: 0, y: chooseRoundOffButton.bounds.height)
         chooseRoundOffDropDown.dataSource = [TipControl.RoundOffOption.NONE.rawValue,
                                              TipControl.RoundOffOption.ROUND_UP.rawValue,
                                              TipControl.RoundOffOption.ROUND_DOWN.rawValue]
         chooseRoundOffDropDown.selectionAction = { [unowned self] (index, item) in
-            self.chooseRoundOffTextField.text = item
+        self.chooseRoundOffButton.setTitle(item, for: .normal)
         }
         chooseRoundOffDropDown.direction = .bottom
 
@@ -120,7 +121,7 @@ class SettingsController: UIViewController, UITextFieldDelegate {
                                     quickTip1: getQuickTip(1),
                                     quickTip2: getQuickTip(2),
                                     quickTip3: getQuickTip(3),
-                                    roundOffOption: chooseRoundOffTextField.text!)
+                                    roundOffOption: chooseRoundOffButton.currentTitle!)
         tipControl.save()
     }
 
