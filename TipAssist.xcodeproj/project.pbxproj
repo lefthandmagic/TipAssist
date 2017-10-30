@@ -73,6 +73,21 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		AC09B2C91FA70F8E0004A02F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC09B2CA1FA70F9C0004A02F /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AC09B2CA1FA70F9C0004A02F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		AC430F0E1F7B5E150055C96E = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +109,7 @@
 		AC430F191F7B5E150055C96E /* TipAssist */ = {
 			isa = PBXGroup;
 			children = (
+				AC09B2C91FA70F8E0004A02F /* Resources */,
 				AC430F1A1F7B5E150055C96E /* AppDelegate.swift */,
 				AC430F1C1F7B5E150055C96E /* TipAssistViewController.swift */,
 				AC430F1E1F7B5E150055C96E /* Main.storyboard */,
