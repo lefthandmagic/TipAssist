@@ -21,8 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TipEZ.png" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-bB-64v">
-                                <rect key="frame" x="65.5" y="268.5" width="243" height="129"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tipez_source.png" translatesAutoresizingMaskIntoConstraints="NO" id="e5u-bB-64v">
+                                <rect key="frame" x="75" y="221" width="224" height="224"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TipEZ.png" width="243" height="129"/>
+        <image name="tipez_source.png" width="224" height="224"/>
     </resources>
 </document>
