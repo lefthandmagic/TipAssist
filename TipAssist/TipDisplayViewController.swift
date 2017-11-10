@@ -52,12 +52,19 @@ class TipDisplayViewController: UIViewController {
             isRoundUpSet = false
             //change color to unset
             roundUpButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
-        } else if(!isRoundUpSet && !isRoundDownSet) {
-            originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
+        } else {
+
+            if(!isRoundUpSet && !isRoundDownSet) {
+                originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
                                             totalAmount: tipDisplay!.totalAmount,
                                             billAmount: tipDisplay!.billAmount,
                                             tipPercentage: tipDisplay!.tipPercentage,
                                             roundOffOption: tipDisplay!.tipRoundOffOption)
+            } else if (isRoundDownSet) {
+                tipDisplay = originalTipDisplay
+                isRoundDownSet = false
+                roundDownButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
+            }
 
             let roundUpTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.up)
             let tipDiff = roundUpTotal - tipDisplay!.totalAmount
@@ -71,17 +78,26 @@ class TipDisplayViewController: UIViewController {
     }
 
     @IBAction func roundDown(_ sender: Any) {
+        // if round down is set, toggle back to default 
         if isRoundDownSet {
             tipDisplay = originalTipDisplay
             isRoundDownSet = false
             roundDownButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
-        } else if (!isRoundDownSet && !isRoundUpSet) {
-        originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
+        } else {
+            // if round down is not set, verify if both options not set, then round down
+            if (!isRoundDownSet && !isRoundUpSet) {
+                originalTipDisplay = TipDisplay(tipAmount: tipDisplay!.tipAmount,
                                         totalAmount: tipDisplay!.totalAmount,
                                         billAmount: tipDisplay!.billAmount,
                                         tipPercentage: tipDisplay!.tipPercentage,
                                         roundOffOption: tipDisplay!.tipRoundOffOption)
 
+                // else if round up option is set, toggle directly to round down
+            } else if (isRoundUpSet) {
+                tipDisplay = originalTipDisplay
+                isRoundUpSet = false
+                roundUpButton.setTitleColor(defaultButtonColor, for: UIControlState.normal)
+            }
         let roundDownTotal = tipDisplay!.totalAmount.rounded(FloatingPointRoundingRule.down)
         let tipDiff = tipDisplay!.totalAmount - roundDownTotal
         tipDisplay!.tipAmount = tipDisplay!.tipAmount - tipDiff
