@@ -1,0 +1,75 @@
+/* Class = "UIButton"; normalTitle = "15%"; ObjectID = "2Ji-a6-KvH"; */
+"2Ji-a6-KvH.normalTitle" = "15%";
+
+/* Class = "UILabel"; text = "Set Quick Tip Options:"; ObjectID = "6g3-9k-Kr9"; */
+"6g3-9k-Kr9.text" = "Establecer opciones de sugerencia rápida:";
+
+/* Class = "UINavigationItem"; title = "Settings"; ObjectID = "71D-v8-Dbn"; */
+"71D-v8-Dbn.title" = "Configuraciones";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "BuC-h7-YBz"; */
+"BuC-h7-YBz.text" = "%";
+
+/* Class = "UIButton"; normalTitle = "Round Up"; ObjectID = "Fgm-3F-aS1"; */
+"Fgm-3F-aS1.normalTitle" = "Redondeo";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "Ftv-Rm-0Ws"; */
+"Ftv-Rm-0Ws.text" = "%";
+
+/* Class = "UITextField"; text = "20"; ObjectID = "MTJ-hP-hKF"; */
+"MTJ-hP-hKF.text" = "20";
+
+/* Class = "UITextField"; text = "10"; ObjectID = "Nzk-ie-nek"; */
+"Nzk-ie-nek.text" = "10";
+
+/* Class = "UIButton"; normalTitle = "Round Down"; ObjectID = "O2V-eX-VHD"; */
+"O2V-eX-VHD.normalTitle" = "Redondear a la baja";
+
+/* Class = "UIButton"; normalTitle = "Choose  Option"; ObjectID = "POZ-Eh-kLj"; */
+"POZ-Eh-kLj.normalTitle" = "Elige la opción";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "Q9L-Ye-895"; */
+"Q9L-Ye-895.text" = "%";
+
+/* Class = "UILabel"; text = "          % tip of "; ObjectID = "SME-23-Tiw"; */
+"SME-23-Tiw.text" = "% de propina";
+
+/* Class = "UIButton"; normalTitle = "Calculate Tip"; ObjectID = "WOe-Tx-Kno"; */
+"WOe-Tx-Kno.normalTitle" = "Calcular propina";
+
+/* Class = "UILabel"; text = "Total Amount"; ObjectID = "Wyo-Mx-iiy"; */
+"Wyo-Mx-iiy.text" = "cantidad total";
+
+/* Class = "UITextField"; text = "15"; ObjectID = "ZFl-ep-xeg"; */
+"ZFl-ep-xeg.text" = "15";
+
+/* Class = "UILabel"; text = "Set Default Tip"; ObjectID = "aCD-aU-02a"; */
+"aCD-aU-02a.text" = "Establecer propina predeterminada";
+
+/* Class = "UIButton"; normalTitle = "20%"; ObjectID = "aze-OQ-wIl"; */
+"aze-OQ-wIl.normalTitle" = "20%";
+
+/* Class = "UITextField"; text = "15"; ObjectID = "j2p-xL-NHI"; */
+"j2p-xL-NHI.text" = "15";
+
+/* Class = "UILabel"; text = "Hey Everyone,  My name is Praveen! This is my first ever app on the appstore  Hope y'all enjoy it. If you have any feedback or wish to report any issues, please send me an email at,  lefthandmagic@gmail.com  "; ObjectID = "peN-8a-5oU"; */
+"peN-8a-5oU.text" = "Hola a todos, mi nombre es Praveen! Esta es mi primera aplicación en la tienda de aplicaciones Espero que lo disfruten. Si tiene algún comentario o desea informar cualquier problema, envíeme un correo electrónico a lefthandmagic@gmail.com";
+
+/* Class = "UILabel"; text = "Custom"; ObjectID = "sTP-tU-TEr"; */
+"sTP-tU-TEr.text" = "Personalizado";
+
+/* Class = "UILabel"; text = "Tip Amount"; ObjectID = "sse-bI-ZAs"; */
+"sse-bI-ZAs.text" = "Cantidad de propinas";
+
+/* Class = "UITextField"; placeholder = "Enter Bill Amount"; ObjectID = "viL-nl-NrH"; */
+"viL-nl-NrH.placeholder" = "ingresar factura";
+
+/* Class = "UIButton"; normalTitle = "10%"; ObjectID = "web-LM-6g9"; */
+"web-LM-6g9.normalTitle" = "10%";
+
+/* Class = "UILabel"; text = "%"; ObjectID = "yhQ-Et-yev"; */
+"yhQ-Et-yev.text" = "%";
+
+/* Class = "UILabel"; text = "Round Off Option"; ObjectID = "zxr-NO-8S6"; */
+"zxr-NO-8S6.text" = "Opción de redondeo";
+

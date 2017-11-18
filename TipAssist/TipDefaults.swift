@@ -31,4 +31,11 @@ struct TipDefaults {
         return imageView
     }
 
+    static func getPercentageNumberFormatter() -> NumberFormatter {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = NumberFormatter.Style.percent
+        numberFormatter.multiplier = 1
+        return numberFormatter
+    }
+
 }

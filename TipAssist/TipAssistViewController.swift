@@ -36,7 +36,7 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     private var billAmount: Double {
         get {
             if let billAmountText = billAmountTextField?.text {
-                return (billAmountText.isEmpty) ? 0: Double(billAmountText)!
+                return (billAmountText.isEmpty) ? 0: NumberFormatter().number(from: billAmountText)!.doubleValue
             }
             return 0
         }
@@ -55,8 +55,8 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func computeQuickTip(_ sender: UIButton) {
         let tipPercentageString = sender.currentTitle!
-        let end = tipPercentageString.index(tipPercentageString.endIndex, offsetBy: -1)
-        tipControl.defaultTip = Int(tipPercentageString[..<end])!
+        let numberFormatter = TipDefaults.getPercentageNumberFormatter()
+        tipControl.defaultTip = (numberFormatter.number(from: tipPercentageString)?.intValue)!
         refreshTip()
     }
 
@@ -74,12 +74,12 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
     }
 
     private func updateUI() {
-        let tipPercentageDouble = Double(tipControl.defaultTip)
-        tipPercentageLabel.text = String("\(tipControl.defaultTip)%")
-        tipPercentageSlider.value = Float(tipPercentageDouble)
-        quickTip1Button.setTitle(String("\(tipControl.quickTip1)%"), for: .normal)
-        quickTip2Button.setTitle(String("\(tipControl.quickTip2)%"), for: .normal)
-        quickTip3Button.setTitle(String("\(tipControl.quickTip3)%"), for: .normal)
+        let numberFormatter = TipDefaults.getPercentageNumberFormatter()
+        tipPercentageLabel.text = numberFormatter.string(from: NSNumber.init(value: tipControl.defaultTip))
+        tipPercentageSlider.value = Float(tipControl.defaultTip)
+        quickTip1Button.setTitle(numberFormatter.string(from: NSNumber.init(value: tipControl.quickTip1)), for: .normal)
+        quickTip2Button.setTitle(numberFormatter.string(from: NSNumber.init(value: tipControl.quickTip2)), for: .normal)
+        quickTip3Button.setTitle(numberFormatter.string(from: NSNumber.init(value: tipControl.quickTip3)), for: .normal)
     }
 
     @IBAction func unwindToTipAssist(sender: UIStoryboardSegue) {
@@ -110,12 +110,12 @@ class TipAssistViewController: UIViewController, UITextFieldDelegate {
         if filtered == string {
             return true
         } else {
-            if string == "." {
+            if string == "." || string == "," {
                 let countdots = textField.text!.components(separatedBy:".").count - 1
                 if countdots == 0 {
                     return true
                 }else{
-                    if countdots > 0 && string == "." {
+                    if countdots > 0 && (string == "." || string == ",") {
                         return false
                     } else {
                         return true
