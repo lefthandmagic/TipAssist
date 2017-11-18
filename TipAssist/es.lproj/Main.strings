@@ -2,7 +2,7 @@
 "2Ji-a6-KvH.normalTitle" = "15%";
 
 /* Class = "UILabel"; text = "Set Quick Tip Options:"; ObjectID = "6g3-9k-Kr9"; */
-"6g3-9k-Kr9.text" = "Establecer opciones de sugerencia rápida:";
+"6g3-9k-Kr9.text" = "establecer propina rápida:";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "71D-v8-Dbn"; */
 "71D-v8-Dbn.title" = "Configuraciones";
@@ -44,7 +44,7 @@
 "ZFl-ep-xeg.text" = "15";
 
 /* Class = "UILabel"; text = "Set Default Tip"; ObjectID = "aCD-aU-02a"; */
-"aCD-aU-02a.text" = "Establecer propina predeterminada";
+"aCD-aU-02a.text" = "propina por defecto";
 
 /* Class = "UIButton"; normalTitle = "20%"; ObjectID = "aze-OQ-wIl"; */
 "aze-OQ-wIl.normalTitle" = "20%";
