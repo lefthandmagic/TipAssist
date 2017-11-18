@@ -82,13 +82,13 @@ class SettingsController: UIViewController, UITextFieldDelegate {
 
         self.defaultTipTextField.text = String(tripControl.defaultTip)
 
-        self.chooseRoundOffButton.setTitle(tripControl.roundOffOption.rawValue, for: .normal)
+        self.chooseRoundOffButton.setTitle(tripControl.roundOffOption.rawValue.localized, for: .normal)
         //setup DropDown
         chooseRoundOffDropDown.anchorView = chooseRoundOffButton
         chooseRoundOffDropDown.bottomOffset = CGPoint(x: 0, y: chooseRoundOffButton.bounds.height)
-        chooseRoundOffDropDown.dataSource = [TipControl.RoundOffOption.NONE.rawValue,
-                                             TipControl.RoundOffOption.ROUND_UP.rawValue,
-                                             TipControl.RoundOffOption.ROUND_DOWN.rawValue]
+        chooseRoundOffDropDown.dataSource = [TipControl.RoundOffOption.NONE.rawValue.localized,
+                                             TipControl.RoundOffOption.ROUND_UP.rawValue.localized,
+                                             TipControl.RoundOffOption.ROUND_DOWN.rawValue.localized]
         chooseRoundOffDropDown.selectionAction = { [unowned self] (index, item) in
         self.chooseRoundOffButton.setTitle(item, for: .normal)
         }

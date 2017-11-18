@@ -13,8 +13,8 @@ struct TipControl {
 
     enum RoundOffOption: String {
         case NONE = "None"
-        case ROUND_UP = "Round Up"
-        case ROUND_DOWN = "Round Down"
+        case ROUND_UP = "RoundUp"
+        case ROUND_DOWN = "RoundDown"
     }
 
     var defaultTip: Int
@@ -77,7 +77,7 @@ struct TipControl {
         case RoundOffOption.ROUND_DOWN.rawValue:
             roundOffVal = RoundOffOption.ROUND_DOWN
         default:
-            fatalError()
+            roundOffVal = RoundOffOption.NONE
         }
         return roundOffVal
     }

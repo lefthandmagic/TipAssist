@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  TipAssist
+
+  Created by Praveen Murugesan on 11/18/17.
+  Copyright © 2017 Praveen Murugesan. All rights reserved.
+*/
+
+"None" = "None";
+"RoundUp" = "Round Up";
+"RoundDown" = "Round Down";
+"TipFor" = "% tip for";
+"Bill" = "Bill";

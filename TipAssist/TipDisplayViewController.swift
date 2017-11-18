@@ -118,7 +118,9 @@ class TipDisplayViewController: UIViewController {
         let billAmountString = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.billAmount))
         numberFormatter.maximumFractionDigits = 1
         let tipPercentageString = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.tipPercentage))
-        tipDisplayHeader.text = String("\(tipPercentageString!) % tip for \(billAmountString!) bill")
+        let tipFor = "TipFor".localized
+        let bill = "Bill".localized
+        tipDisplayHeader.text = String("\(tipPercentageString!) \(tipFor) \(billAmountString!) \(bill)")
     }
 
 }
