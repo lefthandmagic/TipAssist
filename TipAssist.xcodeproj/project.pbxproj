@@ -40,6 +40,7 @@
 		AC1D9C351FC0D73900D0E546 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		AC1D9C381FC0DA5100D0E546 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = TipAssist/es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC1D9C3A1FC0DAD800D0E546 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = TipAssist/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		AC1D9C3C1FC2646400D0E546 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		AC2405DC1F9DEFE800EF50AF /* TipDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDefaults.swift; sourceTree = "<group>"; };
 		AC2405DE1FA2178800EF50AF /* TipDisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipDisplayViewController.swift; sourceTree = "<group>"; };
 		AC31905F1F8060E8008B62B6 /* DoubleExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtension.swift; sourceTree = "<group>"; };
@@ -323,6 +324,7 @@
 			children = (
 				AC430F1F1F7B5E150055C96E /* Base */,
 				AC1D9C2E1FC0919500D0E546 /* es */,
+				AC1D9C3C1FC2646400D0E546 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

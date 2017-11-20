@@ -20,6 +20,10 @@ class TipDisplayViewController: UIViewController {
 
     @IBOutlet weak var roundDownButton: UIButton!
 
+    @IBOutlet weak var splitStepper: UIStepper!
+    
+    @IBOutlet weak var splitValue: UILabel!
+
     var defaultButtonColor: UIColor?
 
     var tipDisplay: TipDisplay?
@@ -28,6 +32,8 @@ class TipDisplayViewController: UIViewController {
 
     var isRoundUpSet: Bool = false
     var isRoundDownSet:Bool = false
+
+    var splits:Double = 1.0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,8 +49,19 @@ class TipDisplayViewController: UIViewController {
             roundUp(roundUpButton)
         }
         self.navigationItem.titleView = TipDefaults.getNavTitleImage()
+
+        splitStepper.wraps = true
+        splitStepper.autorepeat = true
+        splitStepper.minimumValue = 1
+        splitStepper.maximumValue = 20
     }
 
+
+    @IBAction func splitValueChanged(_ sender: UIStepper) {
+        splits = sender.value
+        splitValue.text = Int(splits).description
+        updateUI()
+    }
 
     @IBAction func roundUp(_ sender: UIButton) {
         if isRoundUpSet  {
@@ -113,8 +130,8 @@ class TipDisplayViewController: UIViewController {
         let numberFormatter = NumberFormatter()
         numberFormatter.minimumFractionDigits = 2
         numberFormatter.minimumIntegerDigits = 1
-        tipAmountLabel.text = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.tipAmount))
-        totalAmountLabel.text = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.totalAmount))
+        tipAmountLabel.text = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.tipAmount/splits))
+        totalAmountLabel.text = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.totalAmount/splits))
         let billAmountString = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.billAmount))
         numberFormatter.maximumFractionDigits = 1
         let tipPercentageString = numberFormatter.string(from: NSNumber.init(value: tipDisplay!.tipPercentage))

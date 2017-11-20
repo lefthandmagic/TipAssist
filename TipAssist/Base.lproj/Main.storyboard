@@ -354,7 +354,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="peN-8a-5oU">
-                                <rect key="frame" x="25" y="162.5" width="270" height="92"/>
+                                <rect key="frame" x="25" y="162" width="270" height="92"/>
                                 <string key="text">Hey Everyone, My name is Praveen! This is my first ever app on the appstore. Hope y'all enjoy it. If you have any feedback or wish to report any issues, please send me an email at, lefthandmagic@gmail.com  </string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -363,8 +363,8 @@
                         </subviews>
                         <color key="backgroundColor" red="0.13725490196078433" green="0.16862745098039217" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="peN-8a-5oU" secondAttribute="trailing" constant="9" id="dk3-01-o2f"/>
-                            <constraint firstItem="peN-8a-5oU" firstAttribute="leading" secondItem="6g8-bG-aXm" secondAttribute="leadingMargin" constant="9" id="fc6-9N-JU2"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="peN-8a-5oU" secondAttribute="trailing" constant="9" id="dk3-01-o2f"/>
+                            <constraint firstItem="peN-8a-5oU" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6g8-bG-aXm" secondAttribute="leadingMargin" constant="9" id="fc6-9N-JU2"/>
                             <constraint firstItem="peN-8a-5oU" firstAttribute="centerX" secondItem="6g8-bG-aXm" secondAttribute="centerX" id="kpq-u4-iJR"/>
                             <constraint firstItem="peN-8a-5oU" firstAttribute="centerY" secondItem="6g8-bG-aXm" secondAttribute="centerY" id="m4F-yi-9XT"/>
                         </constraints>
@@ -382,12 +382,12 @@
                         <viewControllerLayoutGuide type="top" id="xcT-yZ-F6c"/>
                         <viewControllerLayoutGuide type="bottom" id="D1e-Ly-RaY"/>
                     </layoutGuides>
-                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="6Vw-Kz-Jok">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="6Vw-Kz-Jok">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Gi6-tc-uir">
-                                <rect key="frame" x="16" y="30" width="288" height="206"/>
+                                <rect key="frame" x="16" y="30" width="288" height="265"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vLs-KE-ANl">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="18"/>
@@ -491,6 +491,31 @@
                                             <constraint firstAttribute="height" constant="50" id="pxQ-7G-PTA"/>
                                         </constraints>
                                     </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="0Xx-Ix-6ZC">
+                                        <rect key="frame" x="0.0" y="236" width="288" height="29"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bY-x4-4KM">
+                                                <rect key="frame" x="0.0" y="0.0" width="76" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stepper clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="ZUG-fL-3ie">
+                                                <rect key="frame" x="106" y="0.0" width="94" height="29"/>
+                                                <color key="backgroundColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="0.30688142123287671" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.89019607840000003" green="0.68235294120000001" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="splitValueChanged:" destination="dAV-BU-zAM" eventType="valueChanged" id="9e8-Qx-U1a"/>
+                                                </connections>
+                                            </stepper>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3MU-uA-1YA">
+                                                <rect key="frame" x="212" y="0.0" width="76" height="29"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -504,6 +529,8 @@
                     <connections>
                         <outlet property="roundDownButton" destination="O2V-eX-VHD" id="fjw-sw-ycz"/>
                         <outlet property="roundUpButton" destination="Fgm-3F-aS1" id="KSS-zu-dOv"/>
+                        <outlet property="splitStepper" destination="ZUG-fL-3ie" id="2QH-Dy-DMf"/>
+                        <outlet property="splitValue" destination="3MU-uA-1YA" id="Qaq-GD-CeR"/>
                         <outlet property="tipAmountLabel" destination="9MX-cx-HpJ" id="VwW-Cf-m4a"/>
                         <outlet property="tipDisplayHeader" destination="SME-23-Tiw" id="CTx-aw-HGU"/>
                         <outlet property="totalAmountLabel" destination="XiX-42-Idk" id="vpW-Pd-sGE"/>
@@ -511,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5l-C4-19L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1933.5999999999999" y="800.14992503748135"/>
+            <point key="canvasLocation" x="1933.125" y="800"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="b4D-P6-sgD">
